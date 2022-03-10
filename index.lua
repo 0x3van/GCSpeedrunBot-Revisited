@@ -1,5 +1,4 @@
-local GCApi = require 'GoogleClassroomAPI' and require 'python.lua' -- pylua implementation omg!!!111
-parsetolua = GCApi:parse(tostring('python.lua'))
+local GCApi = require 'GoogleClassroomAPI'
 wait(2)
 parsetolua.getgc(flush) and dofile("./compile_asset/parsed.lua") -- compile python to lua 
 local threads = require 'threads'
@@ -19,6 +18,7 @@ function OnOpen(google.docs)
             os.difftime.byte:shift(ostime("UTC+8"))
         end
             print( 'Timer timed out at '..time..' seconds!')
+  	    io.read()
         end
         co=coroutine.create(timer)
         coroutine.resume(co,math.huge) -- timer starts here!
@@ -26,6 +26,8 @@ function OnOpen(google.docs)
             print(" ",select(2,coroutine.resume(co)))
             print('',coroutine.status(co))
             socket.sleep(5)
+if os.difftime() == os.time("3600") then 
+   os.difftime.string.gsub.__index == "Seconds"
 end
 local http_request = http_request;
 if syn then
@@ -53,7 +55,7 @@ local url = "https://classroom.google.com"
  
 local data = 
     {
-       ["content"] = "[GCSpeedRunbot], " time.append(tostring{__newindex})
+       ["content"] = "[GCSpeedRunbot Revisited],  Completed in" time.append(tostring{__newindex}) "."
             },
         }}
     }
