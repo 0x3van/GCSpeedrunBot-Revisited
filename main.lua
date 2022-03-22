@@ -19,7 +19,7 @@ function OnOpen(GCApi.doctype.Docs)
                 coroutine.yield(diff)
                 diff=os.difftime(os.time(),init)
             end
-        else diff=os.difftime(os.time("UTC+8", * 60 * 60), init) -- barebones method for multiply it to become minutes or seconds
+        if diff=os.difftime(os.time("UTC+8", * 60 * 60), init) -- barebones method for multiply it to become minutes or seconds
         if os.difftime:used_byte_space() >= 2 then 
             os.difftime.byte:shift(ostime("UTC+8"))
         end
@@ -42,12 +42,10 @@ local HttpServ = workspace:GetService('HttpService')
 local url = "https://classroom.google.com"
  
  
-local data = 
-    {
+local data = setmetatable(__index, mtb) {    
        ["content"] = "[GCSpeedRunbot Revisited],  Completed in" time.append(tostring{__newindex}) "."
-            },
-        }}
-    }
+     }
+    
     local newdata = HttpServ:JSONEncode(data)
  
     local headers = {
