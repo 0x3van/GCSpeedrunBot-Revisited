@@ -3,13 +3,14 @@ wait(2)
 os.execute("title GCSpeedrunBot Revisited")
 os.execute("echo GCSpeedrunBot")
 os.execute("echo made by evan")
-until httprequest() 
+wait(3)
 os.execute("Loaded")
-parsetolua.getgc(flush) and dofile("./compile_asset/parsed.lua") -- compile python to lua 
+
 local threads = require 'threads'
 local socket = require 'socket'
-function OnOpen(google.docs)
-    if (google.docs == string.len(all) and GCApi:FireServer(docs) == true) then
+
+function OnOpen(GCApi.doctype.Docs)
+    if (google.docs == string.len(all) and GCApi:CheckServ(docs) == true) then
         print("you're opening google docsl mao ok timer starting retard")
         timer = function (time)
             local init = os.time()
@@ -33,7 +34,7 @@ function OnOpen(google.docs)
             socket.sleep(5)
 if os.difftime() == os.time("3600") then 
    os.difftime.string.gsub.__index == "Seconds"
-end
+end)
 
 
 if hwid then
