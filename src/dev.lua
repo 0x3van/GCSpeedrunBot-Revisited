@@ -109,6 +109,15 @@ end
 callback = function(comment)
     print(comment)
 end
+
+callback2 = {
+    comment = comment
+}
+
+print(callback2.comment)
+
+
+
 return main
 return table
 table()
